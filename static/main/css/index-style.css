@@ -1,0 +1,92 @@
+/* Custom styles for index page */
+body {font-family: 'Montserrat', sans-serif;}
+.navbar-brand {
+    margin-left: 5.5rem;
+    margin-right: 2rem;
+    color: #f48641 !important;
+    font-size: 1.6rem !important;
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+}
+.nav-link {color: #fff !important;}
+a.nav-link:hover { color: #f48641 !important; }
+.search-addr { width: 22rem !important; }
+.sign-in-bar { margin-right: 5rem !important; }
+.menu-item {
+    padding-left: .5rem !important;
+    padding-right: .5rem !important;
+}
+.search-bar { position: relative; }
+.search-bar input { text-indent: 1rem; }
+.search-bar .fa-map-marker { 
+    position: absolute;
+    top: 11px;
+    left: 10px;
+}
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+.search-wrapper {
+    background: url(/static/main/img/sample_1.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-color:#000;
+    width: 100% !important;
+    height: 550px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.search-intro {
+    color: white;
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    line-height: 1;
+}
+.search-center {
+
+}
+.search-form {width: 27rem !important; position: relative;}
+.search-form input { text-indent: 1rem; }
+.search-btn { margin-left: -.545rem; }
+.marker-inside{ margin-right: 0rem; }
+.featured-listings {
+    display: flex;
+    padding-top: 50px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+}
+.fl-intro {
+    color: black;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    line-height: 1;
+}
+.slider-parent {
+    min-width: 0;
+    min-height: 0;
+}
+.responsive-slider {
+    margin: 2em;
+}
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+.img-slider{
+    background: blue;
+    height: 6em;
+    margin: 0 1em;
+    font-size:2em;
+    color:white;
+    padding:5px;
+}

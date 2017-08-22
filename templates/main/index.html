@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <!-- Custom styles for this page -->
+    <link href="../static/main/css/navbar-top-fixed.css" rel="stylesheet">
+    <link href="../static/main/css/index-style.css" rel="stylesheet">
+    <link href="../static/main/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+{% endblock head %}
+
+{% block content %}
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">cendaro</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item menu-item"">
+            <a class="nav-link" href="/buy">Buy</a>
+          </li>
+          <li class="nav-item menu-item"">
+            <a class="nav-link" href="/sell">Sell</a>
+          </li>
+          <li class="nav-item menu-item"">
+            <a class="nav-link" href="/rent">Rent</a>
+          </li>
+          <li class="nav-item menu-item">
+            <a class="nav-link" href="/find_agent">Find Agent</a>
+          </li>
+          <li class="nav-item menu-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav sign-in-bar">
+          <li class="nav-item menu-item"">
+            <a class="nav-link" href="/register">Register</a>
+          </li>
+          <li class="nav-item menu-item">
+            <a class="btn btn-success" href="/signin">Sign in</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="search-wrapper">
+        <p class="search-intro">Find your perfect home</p>
+        <div class="search-center">
+          <form class="form-inline mt-2 mt-md-0">
+            <input class="form-control mr-sm-2 search-form" type="text" maxlength="60" placeholder="Enter an address, city or zip code" aria-label="Search">
+            <button class="btn btn-success search-btn" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+      <div class="featured-listings">
+        <p class="fl-intro">Featured homes</p>
+        <div class="slider-parent">
+          <div class="responsive-slider">
+            <div class="img-slider"><img style="opacity: 1;" src="/static/main/img/item-slider/1210-Fairgate-Dr-Houston-TX-77094.jpg"></div>
+            <div class="img-slider"><img style="opacity: 1;" src="/static/main/img/item-slider/4111-Graham-Heights-Ln-Katy-TX-77494.jpg"></div>
+            <div class="img-slider"><img style="opacity: 1;" src="/static/main/img/item-slider/20027-Paloma-Bay-Ct-Cypress-TX-77433.jpg"></div>
+            <div class="img-slider"><img style="opacity: 1;" src="/static/main/img/item-slider/11814-Evesborough-Dr-Houston-TX-77099.jpg"></div>
+            <div class="img-slider"><img style="opacity: 1;" src="/static/main/img/item-slider/14551-Myers-Dr-Houston-TX-77090.jpg"></div>
+            <div class="img-slider"><img style="opacity: 1;" src="/static/main/img/item-slider/8414-Postano-Bluff-Dr-Cypress-TX-77433.jpg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock content %}
+
+{% block script %}
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.responsive-slider').slick({
+          dots: true,
+          infinite: false,
+          speed: 300,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+      });
+    </script>
+{% endblock script %}
