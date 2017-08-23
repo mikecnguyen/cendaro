@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from settings_secret import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -19,14 +20,8 @@ MAIN_TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates/main')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&68t$1zef_ku@0wl2liw=yg%yasjxb=a6m#%lwy(z$hmlmgs0e'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-#ALLOWED_HOSTS = ['.cendaro.com', '45.63.38.14']
-ALLOWED_HOSTS = ['.cendaro.com']
 
 # Application definition
 
@@ -69,22 +64,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'cendaro.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'cendaro',
-        'USER': 'cendaro_user',
-        'PASSWORD': 'mikesql',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
