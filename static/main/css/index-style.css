@@ -1,5 +1,8 @@
 /* Custom styles for index page */
-body {font-family: 'Montserrat', sans-serif;}
+body {font-family: 'Montserrat', sans-serif; min-height: 0;}
+.navbar-layout {
+    padding: 10px calc((100% - 1280px)/ 2);
+}
 .navbar-brand {
     margin-left: 5.5rem;
     margin-right: 2rem;
@@ -10,6 +13,11 @@ body {font-family: 'Montserrat', sans-serif;}
 }
 .nav-link {color: #fff !important;}
 a.nav-link:hover { color: #f48641 !important; }
+.dropdown-item:hover { color: #f48641 !important; }
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+}
 .search-addr { width: 22rem !important; }
 .sign-in-bar { margin-right: 5rem !important; }
 .menu-item {
@@ -26,6 +34,35 @@ a.nav-link:hover { color: #f48641 !important; }
 .container-fluid {
     padding-left: 0;
     padding-right: 0;
+}
+.mid-section {
+    margin: 0;
+    padding: 10px calc((100% - 1280px)/ 2);
+}
+.footer {
+    color: #fff;
+    text-align: center;
+}
+.footer-nav {
+    margin: 0;
+    padding: 0;
+}
+.footer-nav-item {
+    display: inline-block;
+    padding: 0 15px 0 15px;
+    vertical-align: middle;
+}
+.footer-nav-small {
+    font-size: 12px;
+}
+.footer-copyright-follow {
+    padding-left: 0;
+    padding-right: 0;
+}
+.footer-nav-separator {
+    border-color: #bbc1cc;
+    border-style: solid;
+    border-width: 0 0 1px;
 }
 .search-wrapper {
     background: url(/static/main/img/sample_1.jpg);
@@ -50,19 +87,14 @@ a.nav-link:hover { color: #f48641 !important; }
     margin-bottom: 30px;
     line-height: 1;
 }
-.search-center {
-
-}
 .search-form {width: 27rem !important; position: relative;}
 .search-form input { text-indent: 1rem; }
 .search-btn { margin-left: -.545rem; }
 .marker-inside{ margin-right: 0rem; }
 .featured-listings {
-    display: flex;
+    display: block;
     padding-top: 50px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; 
+    text-align: center;
 }
 .fl-intro {
     color: black;
@@ -75,18 +107,19 @@ a.nav-link:hover { color: #f48641 !important; }
     min-width: 0;
     min-height: 0;
 }
-.responsive-slider {
-    margin: 2em;
-}
 .slick-prev:before,
 .slick-next:before {
     color: black;
+    font-size: 22px;
 }
-.img-slider{
-    background: blue;
-    height: 6em;
-    margin: 0 1em;
-    font-size:2em;
-    color:white;
-    padding:5px;
+.img-box{
+    background: grey;
+    height: 190px;
+    width: 370px !important;
+    margin: 0 .3em;
+    font-size: 2em;
+    color:black;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
 }

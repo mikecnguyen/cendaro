@@ -8,31 +8,40 @@
 {% endblock head %}
 
 {% block content %}
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">cendaro</a>
+    <!-- Beginning of header nav bar -->
+    <nav class="navbar-layout navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="https://www.cendaro.com">cendaro</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item menu-item"">
-            <a class="nav-link" href="/buy">Buy</a>
+          <li class="nav-item menu-item">
+            <a class="nav-link" href="/homes">Buy</a>
           </li>
-          <li class="nav-item menu-item"">
+          <li class="nav-item menu-item">
             <a class="nav-link" href="/sell">Sell</a>
           </li>
-          <li class="nav-item menu-item"">
-            <a class="nav-link" href="/rent">Rent</a>
+          <li class="nav-item menu-item">
+            <a class="nav-link" href="/homes/for_rent">Rent</a>
           </li>
           <li class="nav-item menu-item">
             <a class="nav-link" href="/find_agent">Find Agent</a>
+          </li>
+          <li class="nav-item menu-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://cendaro.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mortgages</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="/mortgage_rates">Mortgage Rates</a>
+              <a class="dropdown-item" href="/refinance_rates">Refinance Rates</a>
+              <a class="dropdown-item" href="/calculator">Mortgage Calculator</a>
+            </div>
           </li>
           <li class="nav-item menu-item">
             <a class="nav-link" href="/contact">Contact</a>
           </li>
         </ul>
         <ul class="navbar-nav sign-in-bar">
-          <li class="nav-item menu-item"">
+          <li class="nav-item menu-item">
             <a class="nav-link" href="/register">Register</a>
           </li>
           <li class="nav-item menu-item">
@@ -42,6 +51,7 @@
       </div>
     </nav>
 
+    <!-- Beginning of body container -->
     <div class="container-fluid">
       <div class="search-wrapper">
         <p class="search-intro">Find your perfect home</p>
@@ -52,20 +62,51 @@
           </form>
         </div>
       </div>
-      <div class="featured-listings">
-        <p class="fl-intro">Featured homes</p>
-        <div class="slider-parent">
-          <div class="responsive-slider">
-            <div class="img-slider"><img style="opacity: 1;" src="/static/main/img/item-slider/1210-Fairgate-Dr-Houston-TX-77094.jpg"></div>
-            <div class="img-slider"><img style="opacity: 1;" src="/static/main/img/item-slider/4111-Graham-Heights-Ln-Katy-TX-77494.jpg"></div>
-            <div class="img-slider"><img style="opacity: 1;" src="/static/main/img/item-slider/20027-Paloma-Bay-Ct-Cypress-TX-77433.jpg"></div>
-            <div class="img-slider"><img style="opacity: 1;" src="/static/main/img/item-slider/11814-Evesborough-Dr-Houston-TX-77099.jpg"></div>
-            <div class="img-slider"><img style="opacity: 1;" src="/static/main/img/item-slider/14551-Myers-Dr-Houston-TX-77090.jpg"></div>
-            <div class="img-slider"><img style="opacity: 1;" src="/static/main/img/item-slider/8414-Postano-Bluff-Dr-Cypress-TX-77433.jpg"></div>
+
+      <div class="mid-section">
+        <div class="featured-listings">
+          <div class="fl-intro">Featured homes</div>
+          <div class="responsive-slider" data-slick='{"infinite": false, "slidesToShow": 3, "slidesToScroll": 3}'>
+            <div class="img-box"><h3>1</h3></div>
+            <div class="img-box"><h3>2</h3></div>
+            <div class="img-box"><h3>3</h3></div>
+            <div class="img-box"><h3>4</h3></div>
+            <div class="img-box"><h3>5</h3></div>
+            <div class="img-box"><h3>6</h3></div>
           </div>
         </div>
       </div>
+
     </div>
+
+    <!-- Beginning of footer -->
+    <footer class="footer">
+      <div class="footer bg-dark">
+        <div class="footer-nav footer-nav-separator">
+          <ul class="footer-nav">
+            <li class="footer-nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="nav-link" href="/advertise">Advertise</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="nav-link" href="/help">Help</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <ul class="footer-nav">
+            <li class="footer-nav-item footer-nav-small">© 2017 Cendaro</li>
+            <li class="footer-nav-item footer-nav-small">
+              <span class="footer-nav-item footer-copyright-follow">Follow us</span>
+              <span class="footer-nav-item footer-copyright-follow"><a class="nav-link" href="http://www.facebook.com/cendaro-homes"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></span>
+              <span class="footer-nav-item footer-copyright-follow"><a class="nav-link" href="http://www.twitter.com/cendaro-homes"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
 
 {% endblock content %}
 
