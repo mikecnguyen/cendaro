@@ -11,3 +11,8 @@ def index(request):
     template = get_template('index.html')
     html = template.render({'name': 'mike'}, request)
     return HttpResponse(html)
+
+def for_sale(request):
+    template = get_template('for_sale.html')
+    html = template.render(request)
+    return HttpResponse(html)

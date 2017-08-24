@@ -1,7 +1,7 @@
 /* Custom styles for index page */
 body {font-family: 'Montserrat', sans-serif; min-height: 0;}
 .navbar-layout {
-    padding: 10px calc((100% - 1280px)/ 2);
+    padding: 10px calc((100% - 1240px)/ 2);
 }
 .navbar-brand {
     margin-left: 5.5rem;
@@ -13,6 +13,7 @@ body {font-family: 'Montserrat', sans-serif; min-height: 0;}
 }
 .nav-link {color: #fff !important;}
 a.nav-link:hover { color: #f48641 !important; }
+a {outline: 0;}
 .dropdown-item:hover { color: #f48641 !important; }
 .dropdown:hover .dropdown-menu {
     display: block;
@@ -37,7 +38,7 @@ a.nav-link:hover { color: #f48641 !important; }
 }
 .mid-section {
     margin: 0;
-    padding: 10px calc((100% - 1280px)/ 2);
+    padding: 10px calc((100% - 1240px)/ 2);
 }
 .footer {
     color: #fff;
@@ -60,7 +61,7 @@ a.nav-link:hover { color: #f48641 !important; }
     padding-right: 0;
 }
 .footer-nav-separator {
-    border-color: #bbc1cc;
+    border-color: #eaecef;
     border-style: solid;
     border-width: 0 0 1px;
 }
@@ -122,4 +123,51 @@ a.nav-link:hover { color: #f48641 !important; }
     text-align: center;
     vertical-align: middle;
     display: inline-block;
+}
+.top-cities-group {
+    text-align: center; 
+}
+.top-cities-item {
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    padding: 5px;
+    letter-spacing: .5px;
+}
+.top-cities-wrapper {
+    height: 200px;
+    width: 100%;
+    display: table;
+    background-size: cover;
+    background-position: 50%;
+}
+.topcities-title {
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+    display: table-cell;
+    vertical-align: middle;
+    
+}
+.mid-section-ending {
+    background-color: #eaecef;
+    text-align: center;
+    margin-top: 40px;
+    padding: 40px 100px;
+}
+.ending-title {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.ending-detail {
+    font-size: 14px;
+    color: #616366;
+    text-align: center;
+}
+.mail-to {
+    vertical-align: middle;
+    padding-bottom: 5px;
 }
