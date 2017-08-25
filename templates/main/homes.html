@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <!-- Custom styles for this page -->
+    <link rel="stylesheet" href="/static/main/css/map-style.css">
+{% endblock head %}
+
+{% block content %}
+    <!-- Search and filters placed right under the nav bar -->
+    <section class="search-input">
+      <div class="search-input-wrapper input-group">
+        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-location-arrow" aria-hidden="true"></i></span>
+        <input type="text" class="form-control" placeholder="City or zip code" style="font-size: 12px;" aria-describedby="basic-addon1">
+        <span class="input-group-addon search-icon" id="basic-addon2"><i class="fa fa-search" aria-hidden="true"></i></span>
+      </div>
+      <div class="search-filters">
+        <div class="dropdown">
+          <button class="btn btn-custom dropdown-toggle search-filters-btn" type="button" id="listing-type-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Listing type
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-custom" aria-labelledby="listing-type-dropdown">
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">For sale</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">For rent</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-custom dropdown-toggle search-filters-btn" type="button" id="price-range-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Price range
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-custom" aria-labelledby="price-range-dropdown">
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">$10,000+</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">$50,000+</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">$100,000+</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">$150,000+</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">$200,000+</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">$250,000+</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">$300,000+</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">$400,000+</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">$500,000+</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-custom dropdown-toggle search-filters-btn" type="button" id="bed-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Beds
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-custom" aria-labelledby="bed-dropdown">
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">Any</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">Studio</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">1</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">2</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">3+</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-custom dropdown-toggle search-filters-btn" type="button" id="bath-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Baths
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-custom" aria-labelledby="bath-dropdown">
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">Any</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">1+</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">2+</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">3+</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">4+</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-custom dropdown-toggle search-filters-btn" type="button" id="sqft-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Square feet
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-custom" aria-labelledby="sqft-dropdown">
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">Any</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#"><1,000</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">1,000+</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">2,000+</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">3,000+</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-custom dropdown-toggle search-filters-btn" type="button" id="year-built-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Year built
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-custom" aria-labelledby="year-built-dropdown">
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">Any</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">Before 1980</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">1980+</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">2000+</a></li>
+            <li class="dropdown-search-item"><a class="search-item-link" href="#">New</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Beginning of body container -->
+    <div class="container-custom">
+      <section class="main-display">
+        <div class="map-display" id="map-display">
+        </div>
+
+        <div class="property-display">
+          <div class="property-display-top">Austin homes</div>
+          <div class="property-display-group">
+            <div class="property-display-item">
+              <div class="top-cities-wrapper" style="background-image: url(/static/main/img/city-skyline/saigon-d1.jpg);"><div class="topcities-title">Ho Chi Minh City</div></div>
+            </div>
+            <div class="property-display-item">
+              <div class="property-display-wrapper" style="background-image: url(/static/main/img/city-skyline/hanoi_skyline.jpg);"><div class="topcities-title">Ha Noi</div></div>
+            </div>
+            <div class="property-display-item">
+              <div class="property-display-wrapper" style="background-image: url(/static/main/img/city-skyline/danang-skyline.jpg);"><div class="topcities-title">Da Nang</div></div>
+            </div>
+            <div class="property-display-item">
+              <div class="property-display-wrapper" style="background-image: url(/static/main/img/city-skyline/vungtau-skyline.jpg);"><div class="topcities-title">Vung Tau</div></div>
+            </div>
+            <div class="property-display-item">
+              <div class="property-display-wrapper" style="background-image: url(/static/main/img/city-skyline/nhatrang-skyline.jpg);"><div class="topcities-title">Nha Trang</div></div>
+            </div>
+            <div class="property-display-item">
+              <div class="property-display-wrapper" style="background-image: url(/static/main/img/city-skyline/cantho-skyline.jpeg);"><div class="topcities-title">Can Tho</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+{% endblock content %}
+
+{% block script %}
+  <script>
+    function initMap() {
+      var nyc = {lat: 40.7128, lng: -74.0061};
+      var myOptions = {
+        center: nyc,
+        disableDefaultUI: true,
+        mapTypeControlOptions: {mapTypeIds: google.maps.MapTypeId.ROADMAP},
+        mapTypeControl: false,
+        streetViewControl: false,
+        zoom: 14
+      };
+      var map = new google.maps.Map(document.getElementById('map-display'), myOptions);
+      var marker = new google.maps.Marker({
+        position: nyc,
+        map: map
+      });
+      // Resize stuff...
+      google.maps.event.addDomListener(window, "resize", function() {
+        var center = map.getCenter();
+        google.maps.event.trigger(map, "resize");
+        map.setCenter(center); 
+      });
+    };
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTOeyBX-lPL5p0YhWboo8XLg9fGvhhTDo&callback=initMap">
+  </script>
+{% endblock script %}

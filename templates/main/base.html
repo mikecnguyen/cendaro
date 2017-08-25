@@ -4,27 +4,72 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <link rel="icon" href="../static/main/img/favicon.ico">
+    <link rel="icon" href="/static/main/img/favicon.ico">
     <title>Cendaro</title>
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="../static/main/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/main/css/slick.css">
-    <link rel="stylesheet" href="../static/main/css/slick-theme.css">
+    <link rel="stylesheet" href="/static/main/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/main/css/slick.css">
+    <link rel="stylesheet" href="/static/main/css/slick-theme.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="/static/main/css/index-style.css">
+    <link rel="stylesheet" href="/static/main/css/navbar-top-fixed.css">
+    <link rel="stylesheet" href="/static/main/css/font-awesome-4.7.0/css/font-awesome.min.css">
     {% block head %}{% endblock head %}
   </head>
 
   <body>
+    <!-- Beginning of header nav bar -->
+    <nav class="navbar-layout navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="https://www.cendaro.com">cendaro</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item menu-item">
+            <a class="nav-link" href="/homes/for_sale">Buy</a>
+          </li>
+          <li class="nav-item menu-item">
+            <a class="nav-link" href="/sell">Sell</a>
+          </li>
+          <li class="nav-item menu-item">
+            <a class="nav-link" href="/homes/for_rent">Rent</a>
+          </li>
+          <li class="nav-item menu-item">
+            <a class="nav-link" href="/find_agent">Find Agent</a>
+          </li>
+          <li class="nav-item menu-item dropdown dropdown-noclick">
+            <a class="nav-link dropdown-toggle" href="https://cendaro.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mortgages</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="/mortgage_rates">Mortgage Rates</a>
+              <a class="dropdown-item" href="/refinance_rates">Refinance Rates</a>
+              <a class="dropdown-item" href="/calculator">Mortgage Calculator</a>
+            </div>
+          </li>
+          <li class="nav-item menu-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav sign-in-bar">
+          <li class="nav-item menu-item">
+            <a class="nav-link" href="/register">Register</a>
+          </li>
+          <li class="nav-item menu-item">
+            <a class="btn btn-success" href="/signin">Sign in</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     {% block content %}{% endblock content %}
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="../static/main/js/popper.min.js"></script>
-    <script src="../static/main/js/bootstrap.min.js"></script>
-    <script src="../static/main/js/slick.min.js"></script>
+    <script src="/static/main/js/popper.min.js"></script>
+    <script src="/static/main/js/bootstrap.min.js"></script>
+    <script src="/static/main/js/slick.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../static/main/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/static/main/js/ie10-viewport-bug-workaround.js"></script>
     {% block script %}{% endblock script %}
   </body>
 </html>

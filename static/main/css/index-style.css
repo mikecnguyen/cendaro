@@ -15,9 +15,9 @@ body {font-family: 'Montserrat', sans-serif; min-height: 0;}
 a.nav-link:hover { color: #f48641 !important; }
 a {outline: 0;}
 .dropdown-item:hover { color: #f48641 !important; }
-.dropdown:hover .dropdown-menu {
+.dropdown-noclick:hover .dropdown-menu {
     display: block;
-    margin-top: 0; // remove the gap so it doesn't close
+    margin-top: 0; /* Remove the gap so it doesn't close */
 }
 .search-addr { width: 22rem !important; }
 .sign-in-bar { margin-right: 5rem !important; }
@@ -148,7 +148,6 @@ a {outline: 0;}
     color: #fff;
     display: table-cell;
     vertical-align: middle;
-    
 }
 .mid-section-ending {
     background-color: #eaecef;
@@ -170,4 +169,48 @@ a {outline: 0;}
 .mail-to {
     vertical-align: middle;
     padding-bottom: 5px;
+}
+/* Custom styles for homes display page */
+.search-input {
+    padding: 8px 16px;
+    border-bottom: 1px solid #caccce;
+    position: fixed;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    z-index: 21;
+}
+.search-input-wrapper {width: 270px; float: left;}
+.search-icon {
+    background-color: white;
+    border-left: none;
+}
+.search-filters {
+    display: flex;
+}
+.search-filters-btn {
+    font-size: .8rem;
+    margin-left: .7rem;
+    vertical-align: middle;
+    text-align: center;
+}
+.btn-custom {
+    background-color: #fff;
+    border-color: #ccc;
+}
+.dropdown-custom {
+    padding: 5px 12px;
+    min-width: auto;
+}
+.dropdown-search-item {
+    background-color: white;
+}
+.search-item-link {
+    color: black;
+    font-size: .9rem;
+    line-height: 1rem;
+}
+.search-item-link:hover, .dropdown-search-item:hover {
+    color: #f48641;
+    text-decoration: none;
 }

@@ -12,7 +12,12 @@ def index(request):
     html = template.render({'name': 'mike'}, request)
     return HttpResponse(html)
 
+def homes(request):
+    template = get_template('homes.html')
+    html = template.render({'name': 'mike'}, request)
+    return HttpResponse(html)
+
 def for_sale(request):
     template = get_template('for_sale.html')
-    html = template.render(request)
+    html = template.render({'name': 'mike'}, request)
     return HttpResponse(html)
