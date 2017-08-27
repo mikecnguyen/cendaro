@@ -1,0 +1,36 @@
+{
+    "property_id" : 3,
+    "address" : "18272 Gum Tree Ln",
+    "city" : "Huntington Beach",
+    "state" : "CA",
+    "zip_code" : 92646,
+    "full_addr" : "18272-Gum-Tree-Ln-Huntington-Beach-CA-92646",
+    "geolocation" : [ 
+        33.697485, 
+        -117.980775
+    ],
+    "price" : "785000",
+    "bed" : "4",
+    "bath" : "3",
+    "year_built" : 1973,
+    "sqft" : 1740,
+    "lot_size" : 5998,
+    "image" : [ 
+        "ISe8rynu5dmya31000000000.jpg", 
+        "ISu47h7ixn0w161000000000.jpg", 
+        "ISukngmvvmyk261000000000.jpg", 
+        "ISqtft88ekxk161000000000.jpg", 
+        "ISyzh5reis5i161000000000.jpg", 
+        "IS6m0hoykzb4261000000000.jpg", 
+        "ISybv30jdpzk361000000000.jpg", 
+        "IS2nmrysws2w361000000000.jpg", 
+        "ISyve4l5fq1w261000000000.jpg", 
+        "IS6ixfiphx7i361000000000.jpg", 
+        "ISql9rwp7gpc461000000000.jpg", 
+        "IS6ydfx2gw57461000000000.jpg"
+    ],
+    "posted_date" : ISODate("2017-08-25T17:10:35.432Z"),
+    "property_type" : "house",
+	"property_status": "sale",
+	"description": ""
+}

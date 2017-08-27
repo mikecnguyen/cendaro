@@ -1,0 +1,36 @@
+{
+    "property_id" : 4,
+    "address" : "6020 Glencove St",
+    "city" : "Houston",
+    "state" : "TX",
+    "zip_code" : 77007,
+    "full_addr" : "6020-Glencove-St-Houston-TX-77007",
+    "geolocation" : [ 
+        29.7603841, 
+        -95.422925
+    ],
+    "price" : "3479000",
+    "bed" : "5",
+    "bath" : "7",
+    "year_built" : 2017,
+    "sqft" : 7283,
+    "lot_size" : 14810,
+    "image" : [ 
+        "ISugwkol96xxvp0000000000.jpg", 
+        "ISi71du64x75k91000000000.jpg", 
+        "ISuwote365awy81000000000.jpg", 
+        "ISmqmhww1x1zy81000000000.jpg", 
+        "ISirgiogk7s7d91000000000.jpg", 
+        "ISmis0tgn0bgk91000000000.jpg", 
+        "IS2j75cn8cgiz81000000000.jpg", 
+        "IS2vwottvgrak91000000000.jpg", 
+        "IS66ocs3fkulk91000000000.jpg", 
+        "ISap9hutckofz81000000000.jpg", 
+        "ISekk5eqxot1z81000000000.jpg", 
+        "ISale66agzjad91000000000.jpg"
+    ],
+    "posted_date" : ISODate("2017-08-25T17:10:35.432Z"),
+    "property_type" : "house",
+	"property_status": "sale",
+	"description": ""
+}

@@ -1,0 +1,36 @@
+{
+    "property_id" : 5,
+    "address" : "5101 S Farrar St",
+    "city" : "Seattle",
+    "state" : "WA",
+    "zip_code" : 98118,
+    "full_addr" : "5101-S-Farrar-St-Seattle-WA-98118",
+    "geolocation" : [ 
+        47.555393, 
+        -122.269617
+    ],
+    "price" : "649000",
+    "bed" : "4",
+    "bath" : "2",
+    "year_built" : 2015,
+    "sqft" : 1490,
+    "lot_size" : 3798,
+    "image" : [ 
+        "ISekkl6vshlevk1000000000.jpg", 
+        "IS6abx6gormvun1000000000.jpg", 
+        "IS23zb74cn9n7l1000000000.jpg", 
+        "IS2jrokqeh46bn1000000000.jpg", 
+        "ISmqun6r37ts7l1000000000.jpg", 
+        "ISy39lo9kjeyun1000000000.jpg", 
+        "ISucpc2ka9w8bn1000000000.jpg", 
+        "ISij6t3xzs98qm1000000000.jpg", 
+        "IS6eqz5evqcy7l1000000000.jpg", 
+        "ISm6n0kd61obbn1000000000.jpg", 
+        "ISy7onn7ri418l1000000000.jpg", 
+        "ISad4hlqvk1bqm1000000000.jpg"
+    ],
+    "posted_date" : ISODate("2017-08-25T17:10:35.432Z"),
+    "property_type" : "house",
+	"property_status": "sale",
+	"description": ""
+}

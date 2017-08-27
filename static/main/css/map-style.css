@@ -1,9 +1,9 @@
 /* Custom style for maps */
+html {height: 100%; margin: 0; padding: 0;}
 body {overflow: hidden; margin: 0;}
 .fixed-top {padding-bottom: 5px !important;}
 .container-custom {
     margin-top: 3.2rem;
-
 }
 .main-display {
     margin: 0;
@@ -24,6 +24,7 @@ body {overflow: hidden; margin: 0;}
     bottom: 0;
     background-color: #fff;
     overflow-y: auto;
+    box-shadow: -1px -1px 5px 0;
 }
 .property-display-top {
     padding: 10px 15px;
@@ -40,8 +41,27 @@ body {overflow: hidden; margin: 0;}
 }
 .property-display-wrapper {
     height: 200px;
-    width: 100%;
-    display: table;
+    display: flex;
     background-size: cover;
     background-position: 50%;
 }
+
+.fa-location-arrow, #address-search { cursor: pointer; }
+.property-photo-caption {
+    padding-top: 120px;
+    padding-left: 8px;
+    line-height: 1.3;
+    color: #fff;
+    overflow: hidden;
+    text-align: left;
+}
+.property-photo-status {
+    text-align: left;
+    font-size: .9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.property-photo-spec {text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+.property-photo-spec-price {font-size: 30px; margin-right: 10px;}
+.property-photo-spec-details {font-size: 15px;}
+.property-photo-addr {text-align: left; font-size: 15px;}

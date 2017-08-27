@@ -11,7 +11,7 @@
       <div class="search-wrapper">
         <p class="search-intro">Find your perfect home</p>
         <div class="search-center">
-          <form class="form-inline mt-2 mt-md-0">
+          <form class="form-inline mt-2 mt-md-0" action="">
             <input class="form-control mr-sm-2 search-form" type="text" maxlength="60" placeholder="Enter an address, city or zip code" aria-label="Search">
             <button class="btn btn-success search-btn" type="submit">Search</button>
           </form>
@@ -21,13 +21,30 @@
       <div class="mid-section">
         <div class="featured-listings">
           <div class="fl-intro">Featured homes</div>
-          <div class="responsive-slider" data-slick='{"infinite": false, "slidesToShow": 3, "slidesToScroll": 3}'>
-            <div class="img-box"><h3>1</h3></div>
-            <div class="img-box"><h3>2</h3></div>
-            <div class="img-box"><h3>3</h3></div>
-            <div class="img-box"><h3>4</h3></div>
-            <div class="img-box"><h3>5</h3></div>
-            <div class="img-box"><h3>6</h3></div>
+          <div class="responsive-slider">
+            {% if home_list %}
+              {% for home in home_list %}
+                <div class="img-box" style="background-image: url(/static/main/img/homes/{{home.full_addr}}/{{home.image.0}});">
+                  <div class="home-photo-caption">
+                    <div class="home-photo-status">{{home.property_type}} for {{home.property_status}}</div>
+                    <div class="home-photo-spec">
+                      <span class="home-photo-spec-price">${{home.price}}</span>
+                      <span class="home-photo-spec-details">{{home.bed}} bed . </span>
+                      <span class="home-photo-spec-details">{{home.bath}} bath . </span>
+                      <span class="home-photo-spec-details">{{home.sqft}} sqft</span>
+                    </div>
+                    <div class="home-photo-addr">{{home.address}}, {{home.city}}, {{home.state}}</div>
+                  </div>
+                </div>
+              {% endfor %}
+            {% else %}
+              <div class="img-box" style="background-image: url(https://nodes3cdn.hotpads.com/hotpads-web/dist/sf-2lPZNGo.jpg);"><h3>3</h3></div>
+              <div class="img-box" style="background-image: url(https://nodes3cdn.hotpads.com/hotpads-web/dist/seattle-5ZdO0v_.jpg);"><h3>3</h3></div>
+              <div class="img-box" style="background-image: url(https://nodes3cdn.hotpads.com/hotpads-web/dist/houston-2ipc4LO.jpg);"><h3>3</h3></div>
+              <div class="img-box" style="background-image: url(/static/main/img/city-skyline/sanjosetowers.png);"><h3>4</h3></div>
+              <div class="img-box" style="background-image: url(https://nodes3cdn.hotpads.com/hotpads-web/dist/la-24iCGPO.jpg);"><h3>5</h3></div>
+              <div class="img-box" style="background-image: url(https://nodes3cdn.hotpads.com/hotpads-web/dist/sandiego-xJjGtyc.jpg);"><h3>6</h3></div>
+            {% endif %}
           </div>
         </div>
 
@@ -135,9 +152,10 @@
     <script type="text/javascript">
       $(document).ready(function(){
         $('.responsive-slider').slick({
-          dots: true,
           infinite: false,
           speed: 300,
+          arrows: true,
+          adaptiveHeight: false,
           slidesToShow: 3,
           slidesToScroll: 3,
           responsive: [

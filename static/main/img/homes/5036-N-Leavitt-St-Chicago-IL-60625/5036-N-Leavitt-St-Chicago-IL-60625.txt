@@ -1,0 +1,36 @@
+{
+    "property_id" : 5,
+    "address" : "5036 N Leavitt St",
+    "city" : "Chicago",
+    "state" : "IL",
+    "zip_code" : 60625,
+    "full_addr" : "5036-N-Leavitt-St-Chicago-IL-60625",
+    "geolocation" : [ 
+        41.973425, 
+        -87.684478
+    ],
+    "price" : "995000",
+    "bed" : "5",
+    "bath" : "6",
+    "year_built" : 1911,
+    "sqft" : 3960,
+    "lot_size" : 4020,
+    "image" : [ 
+        "ISqt77mp0g9io31000000000.jpg", 
+        "ISq1q2h3n4jbk21000000000.jpg", 
+        "ISin5v3jw71lo31000000000.jpg", 
+        "ISaplegqeo2hk21000000000.jpg", 
+        "ISe8be9txeej521000000000.jpg", 
+        "ISah3jlcszsno31000000000.jpg", 
+        "ISqp4eq9lqpr521000000000.jpg", 
+        "ISij2283hihu521000000000.jpg", 
+        "ISm6fex620epk21000000000.jpg", 
+        "ISmutp6d0mk5621000000000.jpg", 
+        "IS2b1736orkqo31000000000.jpg", 
+        "ISeordo6wdc8621000000000.jpg"
+    ],
+    "posted_date" : ISODate("2017-08-25T17:10:35.432Z"),
+    "property_type" : "house",
+	"property_status": "sale",
+	"description": ""
+}
