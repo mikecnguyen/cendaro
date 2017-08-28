@@ -11,8 +11,8 @@
       <div class="search-wrapper">
         <p class="search-intro">Find your perfect home</p>
         <div class="search-center">
-          <form class="form-inline mt-2 mt-md-0" action="">
-            <input class="form-control mr-sm-2 search-form" type="text" maxlength="60" placeholder="Enter an address, city or zip code" aria-label="Search">
+          <form class="form-inline mt-2 mt-md-0" action="/homes" method="post">{% csrf_token %}
+            <input class="form-control mr-sm-2 search-form" name="query" type="text" maxlength="60" placeholder="Enter an address, city or zip code" aria-label="Search">
             <button class="btn btn-success search-btn" type="submit">Search</button>
           </form>
         </div>

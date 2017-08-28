@@ -16,13 +16,18 @@ def index(request):
 
 def homes(request):
     if request.method == 'POST':
-        location = ''
+        query = request.POST.get("query", "")
 
     home_list = Home.objects.order_by('-posted_date')
     context = {'home_list': home_list}
     return render(request, 'homes.html', context)
 
 def for_sale(request):
-    template = get_template('for_sale.html')
-    html = template.render({'name': 'mike'}, request)
-    return HttpResponse(html)
+    home_list = Home.objects.order_by('-posted_date')
+    context = {'home_list': home_list}
+    return render(request, 'for_sale.html', context)
+
+def home_details(request, full_addr=None):
+    home = Home.objects.get(full_addr=full_addr)
+    context = {'full_addr': full_addr, 'home_details': home}
+    return render(request, 'home_details.html', context)
