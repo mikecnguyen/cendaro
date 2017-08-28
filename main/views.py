@@ -9,8 +9,8 @@ from django.http import HttpResponse
 from django.template.loader import get_template
 
 def index(request):
-    user_list = User.objects.order_by('-created_date')[:5]
-    home_list = Home.objects.order_by('-posted_date')[:5]
+    user_list = User.objects.order_by('-created_date')
+    home_list = Home.objects.order_by('-posted_date')
     context = {'user_list': user_list, 'home_list': home_list}
     return render(request, 'index.html', context)
 
@@ -18,7 +18,7 @@ def homes(request):
     if request.method == 'POST':
         location = ''
 
-    home_list = Home.objects.order_by('-posted_date')[:5]
+    home_list = Home.objects.order_by('-posted_date')
     context = {'home_list': home_list}
     return render(request, 'homes.html', context)
 

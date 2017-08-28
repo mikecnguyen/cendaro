@@ -39,6 +39,7 @@ body {overflow: hidden; margin: 0;}
     vertical-align: top;
     padding: 5px;
 }
+.property-display-item a:hover {text-decoration: none !important;}
 .property-display-wrapper {
     height: 200px;
     display: flex;

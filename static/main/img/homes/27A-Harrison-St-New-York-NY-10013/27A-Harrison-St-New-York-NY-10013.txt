@@ -1,0 +1,36 @@
+{
+    "property_id" : 7,
+    "address" : "27A Harrison St",
+    "city" : "New York",
+    "state" : "NY",
+    "zip_code" : 10013,
+    "full_addr" : "27A-Harrison-St-New-York-NY-10013",
+    "geolocation" : [ 
+        40.718659, 
+        -74.010789
+    ],
+    "price" : "6500000",
+    "bed" : "3",
+    "bath" : "3",
+    "year_built" : 1899,
+    "sqft" : 3700,
+    "lot_size" : 1591,
+    "image" : [ 
+        "ISq1mjzpwigf3j1000000000.jpg", 
+        "IS27a3n81qpqt00000000000.jpg", 
+        "ISa1nvfyo5abdk1000000000.jpg", 
+        "IS2vkjxrkx1edk1000000000.jpg", 
+        "IS2jfjg6kurn3j1000000000.jpg", 
+        "ISucd7yzfmjq3j1000000000.jpg", 
+        "ISe09jxm763w3j1000000000.jpg", 
+        "ISeceje889dmdk1000000000.jpg", 
+        "ISyn4vw9zpm14j1000000000.jpg", 
+        "IS66c7w1415pdk1000000000.jpg", 
+        "ISqh2je3vhe44j1000000000.jpg", 
+        "ISew9diqpugibj1000000000.jpg"
+    ],
+    "posted_date" : ISODate("2017-08-26T17:10:35.432Z"),
+    "property_type" : "house",
+    "property_status" : "sale",
+    "description" : ""
+}

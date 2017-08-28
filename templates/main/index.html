@@ -25,16 +25,18 @@
             {% if home_list %}
               {% for home in home_list %}
                 <div class="img-box" style="background-image: url(/static/main/img/homes/{{home.full_addr}}/{{home.image.0}});">
-                  <div class="home-photo-caption">
-                    <div class="home-photo-status">{{home.property_type}} for {{home.property_status}}</div>
-                    <div class="home-photo-spec">
-                      <span class="home-photo-spec-price">${{home.price}}</span>
-                      <span class="home-photo-spec-details">{{home.bed}} bed . </span>
-                      <span class="home-photo-spec-details">{{home.bath}} bath . </span>
-                      <span class="home-photo-spec-details">{{home.sqft}} sqft</span>
+                  <a class="home-display-link" href="/homes/for_sale/{{home.full_addr}}">
+                    <div class="home-photo-caption">
+                      <div class="home-photo-status">{{home.property_type}} for {{home.property_status}}</div>
+                      <div class="home-photo-spec">
+                        <span class="home-photo-spec-price">{{home.price}}</span>
+                        <span class="home-photo-spec-details">{{home.bed}} bed . </span>
+                        <span class="home-photo-spec-details">{{home.bath}} bath . </span>
+                        <span class="home-photo-spec-details">{{home.sqft}} sqft</span>
+                      </div>
+                      <div class="home-photo-addr">{{home.address}}, {{home.city}}, {{home.state}}</div>
                     </div>
-                    <div class="home-photo-addr">{{home.address}}, {{home.city}}, {{home.state}}</div>
-                  </div>
+                  </a>
                 </div>
               {% endfor %}
             {% else %}
@@ -183,6 +185,12 @@
               }
             }
           ]
+        });
+
+        $(".home-photo-spec-price").each(function() {
+            var price = $(this).text();
+            var formatted_price = "$" + addCommas(price);
+            $(this).text(formatted_price);
         });
       });
     </script>

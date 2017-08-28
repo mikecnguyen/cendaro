@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <meta name="description" content="">
     <link rel="icon" href="/static/main/img/favicon.ico">
     <title>Cendaro</title>
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="/static/main/css/index-style.css">
     <link rel="stylesheet" href="/static/main/css/navbar-top-fixed.css">
+    <link rel="stylesheet" href="/static/main/css/signin.css">
     <link rel="stylesheet" href="/static/main/css/font-awesome-4.7.0/css/font-awesome.min.css">
     {% block head %}{% endblock head %}
   </head>
@@ -52,14 +53,70 @@
         </ul>
         <ul class="navbar-nav sign-in-bar">
           <li class="nav-item menu-item">
-            <a class="nav-link" href="/register">Register</a>
+            <a class="nav-link" id="reg-btn" data-toggle="modal" data-target="#signinModal" style="cursor:pointer;">Register</a>
           </li>
           <li class="nav-item menu-item">
-            <a class="btn btn-success" href="/signin">Sign in</a>
+            <button class="btn btn-success" id="signin-btn" data-toggle="modal" data-target="#signinModal" style="cursor:pointer;">Sign in</button>
           </li>
         </ul>
       </div>
     </nav>
+
+    <!-- Signin Modal -->
+    <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="signinModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="signin-form">
+              <ul class="signin-tab-group">
+                  <li class="signin-tab signin active"><a href="#signin">Sign in</a></li>
+                  <li class="signin-tab register"><a href="#register" id="modal-reg">Register</a></li>
+              </ul>    
+              <div class="signin-tab-content">
+
+                  <div id="signin">   
+                      <h1>Welcome back!</h1>       
+                      <form action="/" method="post">       
+                          <div class="signin-field-wrap">
+                              <label>
+                              Email<span class="signin-req">*</span>
+                              </label>
+                              <input class="input-email" type="email" required autocomplete="off"/>
+                          </div>                      
+                          <div class="signin-field-wrap">
+                              <label>
+                              Password<span class="signin-req">*</span>
+                              </label>
+                              <input class="input-pw" type="password" required autocomplete="off"/>
+                          </div>                      
+                          <p class="signin-forgot"><a href="#">Forgot Password?</a></p>
+                          <button class="signin-button button-block"/>Sign In</button>       
+                      </form>
+                  </div>
+
+                  <div id="register">   
+                      <h1>Create new account</h1>           
+                      <form action="/" method="post">  
+                          <div class="signin-field-wrap">
+                              <label>
+                              Email<span class="signin-req">*</span>
+                              </label>
+                              <input class="input-email" type="email" required autocomplete="off"/>
+                          </div>                          
+                          <div class="signin-field-wrap">
+                              <label>
+                              Password<span class="signin-req">*</span>
+                              </label>
+                              <input class="input-pw" type="password" required autocomplete="off"/>
+                          </div>                         
+                          <button type="submit" class="signin-button button-block"/>Get Started</button>                     
+                      </form>
+                  </div>
+       
+              </div><!-- tab-content -->  
+          </div> <!-- /form -->
+        </div>
+      </div>
+    </div>
     {% block content %}{% endblock content %}
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -68,8 +125,22 @@
     <script src="/static/main/js/popper.min.js"></script>
     <script src="/static/main/js/bootstrap.min.js"></script>
     <script src="/static/main/js/slick.min.js"></script>
+    <script src="/static/main/js/signin.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="/static/main/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+        function addCommas(nStr) {
+            nStr += '';
+            x = nStr.split('.');
+            x1 = x[0];
+            x2 = x.length > 1 ? '.' + x[1] : '';
+            var rgx = /(\d+)(\d{3})/;
+            while (rgx.test(x1)) {
+                x1 = x1.replace(rgx, '$1' + ',' + '$2');
+            }
+            return x1 + x2;
+        };
+    </script>
     {% block script %}{% endblock script %}
   </body>
 </html>

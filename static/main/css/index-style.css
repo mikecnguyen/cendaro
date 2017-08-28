@@ -116,12 +116,13 @@ a {outline: 0;}
     background-size: cover;
     background-position: 50%;
 }
+.img-box a:hover {text-decoration: none !important;}
 .home-photo-caption {
-    padding-top: 115px;
-    padding-left: 8px;
-    line-height: 1.3;
-    position: relative;
+    padding-top: 125px;
+    padding-left: 6px;
+    line-height: 1.2;
     color: #fff;
+    text-align: left;
 }
 .home-photo-status {
     text-align: left;
@@ -129,7 +130,8 @@ a {outline: 0;}
     font-weight: 700;
     text-transform: uppercase;
 }
-.home-photo-spec-price {font-size: 30px; margin-right: 10px; margin-left: -36px;}
+.home-photo-spec {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.home-photo-spec-price {font-size: 30px; margin-right: 10px;}
 .home-photo-spec-details {font-size: 15px;}
 .home-photo-addr {text-align: left; font-size: 15px;}
 .top-cities-group {
